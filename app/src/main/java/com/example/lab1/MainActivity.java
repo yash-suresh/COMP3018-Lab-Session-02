@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity
                     "drawable", getPackageName());
 
             catcatCard.catName = catNames[i];
-
+            catList.add(catcatCard);
 
         }
 
