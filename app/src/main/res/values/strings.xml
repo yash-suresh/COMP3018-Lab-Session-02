@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string-array name="cat_names">
+        <item name="scribble" type="string">scribble</item>
+        <item name="cat0" type="string">scribble</item>
+        <item name="cat1" type="string">gucci</item>
+        <item name="cat2" type="string">jazz</item>
+        <item name="cat3" type="string">martin</item>
+        <item name="cat4" type="string">pepper</item>
+        <item name="cat5" type="string">tom</item>
+        <item name="cat6" type="string">whiskers</item>
+        <item name="cat7" type="string">billy</item>
+    </string-array>
+
+
+
+
+
+
+</resources>
