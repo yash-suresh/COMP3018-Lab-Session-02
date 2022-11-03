@@ -45,7 +45,7 @@ public class CatRecyclerViewAdapter extends
         void bind(final CatCard cat)
         {
             catImage.setImageResource(cat.resourceID);
-            textView.setText("cat.catName");
+            textView.setText(cat.catName);
             // do the same with the cat name
             //
         }
