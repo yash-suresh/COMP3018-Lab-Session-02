@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,18 +28,26 @@ public class CatRecyclerViewAdapter extends
 
     class CatViewHolder extends RecyclerView.ViewHolder
     {
-
+        ImageView catImage;
+        TextView textView;
 
         // keep a reference to the image view and text view here
         CatViewHolder(View itemView)
         {
+
+
             super(itemView);
             // retrieve image and text views by resource ID
+            // get an ImageView using the id in the XML
+            catImage = itemView.findViewById(R.id.catImage);
+            textView = itemView.findViewById(R.id.catName);
         }
         void bind(final CatCard cat)
         {
             catImage.setImageResource(cat.resourceID);
+            textView.setText("cat.catName");
             // do the same with the cat name
+            //
         }
     }
 
@@ -46,19 +55,21 @@ public class CatRecyclerViewAdapter extends
     @Override
     public CatRecyclerViewAdapter.CatViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
-        return null;
+        View itemView = layoutInflater.inflate(R.layout.cat_card_layout, parent, false);
+        return new CatViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CatRecyclerViewAdapter.CatViewHolder holder, int position)
     {
-
+        holder.bind(data.get(position));
     }
 
     @Override
     public int getItemCount()
+
     {
-        return 0;
+        return data.size();
     }
 
 

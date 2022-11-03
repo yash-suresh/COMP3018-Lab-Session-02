@@ -1,6 +1,8 @@
 package com.example.lab1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -8,6 +10,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
+    //entry point of the application when started
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,6 +31,11 @@ public class MainActivity extends AppCompatActivity
             catList.add(catcatCard);
 
         }
+
+        RecyclerView recyclerView = findViewById(R.id.recycler1);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        CatRecyclerViewAdapter adapter = new CatRecyclerViewAdapter(this, catList);
+        recyclerView.setAdapter(adapter);
 
 
     }
